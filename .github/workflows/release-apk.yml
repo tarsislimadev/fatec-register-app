@@ -3,9 +3,6 @@ name: Build and Release APK
 on:
   workflow_dispatch:
 
-env:
-  GITHUB_REF_NAME: ${{ date +'%Y%m%d%H%M%S' }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,6 +10,9 @@ jobs:
       contents: write
 
     steps:
+      - name: Set current date and time
+        run: echo "CUR_DATE_TIME=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
+
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -26,6 +26,6 @@ jobs:
         uses: softprops/action-gh-release@v3
         with:
           files: src/mobile/**/**/**/**/**.apk
-          tag_name: ${{ env.GITHUB_REF_NAME }}
+          tag_name: v${{ env.CUR_DATE_TIME }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
