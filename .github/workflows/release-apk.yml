@@ -2,6 +2,9 @@ name: Build and Release APK
 
 on:
   workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
 
 jobs:
   build:
@@ -20,7 +23,8 @@ jobs:
         run: docker compose run --rm mobile flutter build apk --release
 
       - name: Upload APK to GitHub Releases
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
+        if: github.ref_type == 'tag'
         with:
           files: src/mobile/**/**/**/**/**.apk
         env:
