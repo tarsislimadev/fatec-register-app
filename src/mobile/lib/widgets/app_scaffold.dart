@@ -1,3 +1,4 @@
+import 'package:app/config/environment.dart';
 import 'package:app/services/storage_service.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -37,7 +38,7 @@ class _AppScaffoldState extends State<AppScaffold> {
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text('Treino Por Aí'),
+                const Text('Fatec Register'),
                 if (widget.tab != null) ...[
                   InkWell(
                     onTap: signOut,
