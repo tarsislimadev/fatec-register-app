@@ -1,0 +1,25 @@
+services:
+  mobile:
+    build: ./src/mobile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - api
+
+  api:
+    build: ./src/api
+    environment:
+      - PORT=3000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - database
+
+  database:
+    build: ./src/database
+    environment:
+      POSTGRES_USER: fatec
+      POSTGRES_PASSWORD: fatec
+      POSTGRES_DB: fatec
+    ports:
+      - "5432:5432"
