@@ -2,9 +2,9 @@ name: Build and Release APK
 
 on:
   workflow_dispatch:
-  push:
-    tags:
-      - 'v*'
+
+env:
+  GITHUB_REF_NAME: ${{ date +'%Y%m%d%H%M%S' }}
 
 jobs:
   build:
@@ -24,8 +24,8 @@ jobs:
 
       - name: Upload APK to GitHub Releases
         uses: softprops/action-gh-release@v3
-        if: github.ref_type == 'tag'
         with:
           files: src/mobile/**/**/**/**/**.apk
+          tag_name: ${{ env.GITHUB_REF_NAME }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
