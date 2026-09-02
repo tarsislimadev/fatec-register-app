@@ -4,7 +4,7 @@ O aplicativo da Fatec foi desenvolvido para ajudar a Secreataria Municipal da Mu
 
 ## download do aplicativo
 
-[DOWNLOADS](#)
+[Releases](https://github.com/tarsislimadev/fatec-women-app/releases)
 
 ## configuração local
 
