@@ -3,3 +3,7 @@
 - [ ] No [Portal de Dados Abertos](https://dados.gov.br/dados/conjuntos-dados), pesquisar por "Violência contra Mulheres".
 
 - [ ] Extrair dados de [Violência Física - Mulheres](https://dados.gov.br/dados/conjuntos-dados/avl270)
+
+- [ ] https://www.gov.br/pt-br/servicos/receber-atendimento-em-situacoes-de-violencia-sofrida-pela-mulher-no-hospital-da-mulher-hospital-de-clinicas-da-uftm
+
+- [ ] https://www.gov.br/pt-br/servicos/denunciar-e-buscar-ajuda-a-vitimas-de-violencia-contra-mulheres
