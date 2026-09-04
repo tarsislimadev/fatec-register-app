@@ -1,6 +1,6 @@
 # Fatec Women app
 
-O aplicativo da Fatec foi desenvolvido para ajudar a Secreataria Municipal da Mulher, em Rio Claro, a registrar casos de violencia contra a mulher.
+O aplicativo foi desenvolvido, pela Fatec Rio Claro, para ajudar a Secretaria Municipal da Mulher a registrar casos de violência contra mulheres.
 
 ## download do aplicativo
 
